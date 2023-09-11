@@ -1,0 +1,37 @@
+$primary-color:#fff;
+$secondary-color:#2B2730;
+body{
+    background:$primary-color;
+}
+@mixin flexbox{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.head{
+    @include flexbox;
+}
+.nav-bar{
+    margin-top:-20px;
+}
+.nav-list{
+    @include flexbox;
+    
+    & li{
+        list-style: none;
+
+        & a{
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 15px;
+            color: $secondary-color;
+            padding: 5px;
+        }
+    }
+}
+.logo{
+    height: 100px;
+}
+
